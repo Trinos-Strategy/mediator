@@ -345,8 +345,10 @@ export default function Home() {
       {/* Testimonials Section */}
       <section className="py-20">
         <div className="container">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">What Clients Say</h2>
-          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">Testimonials & Recommendations</h2>
+          
+          {/* Featured Text Testimonials */}
+          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 mb-16">
             <Card className="border-2">
               <CardContent className="p-8">
                 <blockquote className="space-y-4">
@@ -372,6 +374,40 @@ export default function Home() {
                 </blockquote>
               </CardContent>
             </Card>
+          </div>
+
+          {/* Testimonial Images Gallery */}
+          <div className="max-w-6xl mx-auto">
+            <h3 className="text-2xl font-bold mb-8 text-center">Recommendations from Colleagues & Clients</h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              {[
+                { name: 'Namsun Kim', img: '1_NamsunKim.png' },
+                { name: 'Jiho Ahn', img: '2_JihoAhn.jpg' },
+                { name: 'JoongSub Shin', img: '3_JoongSubShin.png' },
+                { name: 'Sean Jung', img: '4_SeanJung.png' },
+                { name: 'Namwook Choi', img: '5_NamwookChoi.png' },
+                { name: 'Jaewoo Jung', img: '6_JaewooJung.png' },
+                { name: 'HyoYoung Kang', img: '7_HyoYoungKang.jpg' },
+                { name: 'Jonghyek Park', img: '8_JonghyekPark.jpg' },
+                { name: 'Johnno Kim', img: '9_JohnnoKim.jpg' },
+                { name: 'Masao', img: '10_Masao.jpg' },
+                { name: 'Soichiro', img: '11_Soichiro.jpg' },
+                { name: 'Taehoon Kim', img: '12_TaehoonKim.jpg' },
+                { name: 'Jeff Lu', img: '13_JeffLu.jpg' },
+                { name: 'Chris Kang', img: '14_ChrisKang.jpg' },
+                { name: 'Byungwoo Im', img: '15_ByungwooIm.jpg' },
+                { name: 'Hyemin Park', img: '16_hyeminPark.jpg' },
+                { name: 'Beumrae Kim', img: '17_BeumraeKIm.png' },
+              ].map((testimonial, index) => (
+                <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
+                  <img 
+                    src={`/testimonials/${testimonial.img}`} 
+                    alt={`Testimonial from ${testimonial.name}`}
+                    className="w-full h-auto object-cover"
+                  />
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </section>
