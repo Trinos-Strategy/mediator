@@ -1,0 +1,1 @@
+# Photos\n\nUpload your professional photos here.\n\nRecommended:\n- Profile photo (headshot)\n- Mediation session photos\n- Professional event photos\n\nFormat: JPG or PNG\nSize: Optimized for web (< 500KB recommended)
